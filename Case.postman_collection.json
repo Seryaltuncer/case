@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "cecc904a-1843-42fb-9a59-3ad989258ba2",
+		"name": "Case",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22968432"
+	},
+	"item": [
+		{
+			"name": "Create Author",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"seryal\",\n\t\"date_birth\": \"qwerqwe\",\n\t\"bio\" : \"lorem\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/author",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"author"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Blog Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"authorName\": \"seryal\",\n\t\"title\": \"title\",\n\t\"text\" : \"text\",\n    \"photos\": [\n        {\n           \"caption\": \"caption-1\",\n           \"photo\": \"photo-1\"\n        },\n        {\n           \"caption\": \"caption-2\",\n           \"photo\": \"photo-2\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/blog-post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"blog-post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Blog Post",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"authorName\": \"seryal\",\n\t\"title\": \"title\",\n\t\"text\" : \"text\",\n    \"photos\": [\n        {\n           \"caption\": \"caption-1\",\n           \"photo\": \"photo-1\"\n        },\n        {\n           \"caption\": \"caption-2\",\n           \"photo\": \"photo-2\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/blog-post/2MmXQ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"blog-post",
+						"2MmXQ"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Author",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/author-list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"author-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/post-list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"post-list"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
